@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kevin Marrero</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/b08459ac42.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -18,28 +19,28 @@
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect"
               >Projects</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect"
               >Contact</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect"
               ><i class="fas fa-adjust click"></i> </a
             >
           </li>
@@ -70,6 +71,66 @@
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+          <p class="modal__para">
+            I’m a <span class="highlight--purple">Frontend software engineer</span> with a passion for building clean, responsive, and <span class="highlight--purple">user‑focused digital experiences.</span> At 21, I’m early in my career but deeply committed to growing my skills, taking on real‑world challenges, and contributing to teams that value <span class="highlight--purple">creativity</span> and <span class="highlight--purple">modern web development.</span> 
+            <br>
+            As a Hispanic developer, I’m proud to bring my perspective, work ethic, and curiosity into the tech space. I’m constantly learning, improving, and pushing myself to write better code and <span class="highlight--purple">create interfaces</span> that feel intuitive and engaging.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+            <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+            <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+            <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+            <span class="language__name">HTML</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h4 class="modal__subtitle modal__subtitle--contact">I'm currently open to new opportunities.</h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user__name" type="text" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user__email" type="email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to chat soon.
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
+      </div>
 
       </div>
     </section>
@@ -83,7 +144,7 @@
           <ul class="project__list">
             <li class="project">
               <div class="project__wrapper">
-                <img src="./assets/project1imagetest.png" alt="">
+                <img class="project__img" src="./assets/project1imagetest.png" alt="">
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">
@@ -118,23 +179,19 @@
         </figure>
         <div class="footer__social--list">
           <a href="#" class="footer__social--link
-          link__hover-effect
-          link__hover-effect--white">
+          link__hover-effect">
           Github
         </a>
         <a href="#" class="footer__social--link
-          link__hover-effect
-          link__hover-effect--white">
+          link__hover-effect">
           LinkedIn
         </a>
         <a href="#" class="footer__social--link
-          link__hover-effect
-          link__hover-effect--white">
+          link__hover-effect">
           Email
         </a>
         <a href="#" class="footer__social--link
-          link__hover-effect
-          link__hover-effect--white">
+          link__hover-effect">
           Resume
         </a>
         </div>
