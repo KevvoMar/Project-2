@@ -67,6 +67,22 @@ input:focus, textarea:focus {
     border-color: var(--primary);
 }
 
+nav,
+.scroll,
+.header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease;
+}
+
+.modal__open nav,
+.modal__open .scroll,
+.modal__open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms;
+}
+
 
 .container {
     padding: 50px 0;
@@ -79,6 +95,11 @@ input:focus, textarea:focus {
     margin: 0 auto;
     padding: 0 12px;
 
+}
+
+.fas,
+.fab {
+    color: white;
 }
 
 .click {
@@ -162,6 +183,7 @@ LANDING-PAGE
 
 .social__link {
     background-color: var(--primary);
+    color: white;
     padding: 6px 6px;
     font-size: 20px;
     text-align: center;
@@ -176,6 +198,7 @@ LANDING-PAGE
     border-radius: 50%;
     border: none;
     background-color: var(--primary-dark);
+    color: white;
     position: absolute;
     bottom: 32px;
     right: 40px;
@@ -269,6 +292,19 @@ MODAL
 
  */
 
+ .modal__open .modal {
+    z-index: 60;
+    box-shadow: 0 20px 60px 0 rgba(255, 255, 255, 0.6);
+    visibility: visible;
+    z-index: 1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal__open .modal__about,
+.modal__open .modal__contact {
+    transform: translateX(0%);
+}
+
  .modal {
     position: absolute;
     top: 50%;
@@ -277,10 +313,10 @@ MODAL
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 60px 0 rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
  }
 
  .modal__half {
@@ -290,17 +326,20 @@ MODAL
     flex-direction: column;
     justify-content: center;
     padding: 40px 72px;
+    transition: all 300ms ease-in;
 
  }
 
  .modal__about {
     background-color: var(--background);
     color: var(--text);
+    transform: translateX(-110%);
  }
 
  .modal__contact {
     background-color: var(--text);
     color: var(--background);
+    transform: translateX(110%);
     
  }
 
@@ -356,6 +395,11 @@ MODAL
     margin-bottom: 20px;
  }
 
+ .form__submit--container {
+    display: flex;
+    justify-self: center;
+ }
+
  .form__submit {
     background-color: var(--primary);
     border: 2px solid var(--primary);
@@ -388,7 +432,7 @@ MODAL
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -411,6 +455,7 @@ MODAL
 
  .modal__overlay--visible {
     z-index: 1;
+    display: flex;
  }
 
  .modal__overlay--invisible {
@@ -434,7 +479,7 @@ MODAL
     position: absolute;
     top: 30px;
     right: 40px;
-    color: #fff;
+    color: black;
     font-size: 36px;
     z-index: 100;
 }
@@ -507,8 +552,12 @@ PROJECTS
     margin-top: 8px 0;
 }
 
+.project__description--links {
+  display: flex;
+  gap: 1rem;
+}
+
 .project__description--link {
-    color: black;
     font-size: 20px;
     margin-right: 16px;
 }
