@@ -1,4 +1,3 @@
-
 function contact(event) {
     event.preventDefault();
 
@@ -8,11 +7,14 @@ function contact(event) {
     setTimeout(() => {
         loading.classList.remove("modal__overlay--visible")
         success.classList += " modal__overlay--visible";
-        console.log('it worked 1')
+        document.getElementById("contact__form").reset();
     }, 1000);
-
+    setTimeout(() => {
+        success.classList.remove("modal__overlay--visible")
+    }, 3500)
 }
 
+const scaleFactor = 1 / 20
 let isModalOpen = false;
 function toggleModal() {
     if (isModalOpen) {
@@ -26,4 +28,22 @@ function toggleModal() {
 function closeModal() {
     isModalOpen = false
     return document.body.classList.remove('modal__open')
+}
+
+function toggleLight() {
+  document.documentElement.classList.toggle("light")
+  document.documentElement.classList.toggle("light__logo")
+  document.documentElement.classList.toggle("light__logo")
+}
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll('.shape')
+    const x = event.clientX * scaleFactor
+    const y = event.clientY * scaleFactor
+
+    for (let i = 0; i < shapes.length; ++i) {
+        const  isOdd = i % 2 !== 0;
+        const boolInt = isOdd ? -1 : 1 
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+    }
 }
