@@ -1,215 +1,251 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kevin Marrero</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-    <script src="https://kit.fontawesome.com/b08459ac42.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <section id="landing-page" onmousemove="moveBackground(event)">
-      <nav>
-        <figure class="nav__logo--wrapper">
-          <img class="nav__logo light__logo" src="./assets/logo.png" alt="" />
-        </figure>
 
-        <ul class="nav__link--list">
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect"
-              >About</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect"
-              >Projects</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#" onclick="toggleModal()"
-              class="nav__link--anchor link__hover-effect"
-              >Contact</a
-            >
-          </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect"
-              ><i class="fas fa-adjust click" onclick="toggleLight()"></i> </a
-            >
-          </li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Marrero</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script src="https://kit.fontawesome.com/b08459ac42.js" crossorigin="anonymous"></script>
+</head>
 
-      <header class="header">
-        <div class="header__content">
-          <h1 class="header__title">Hey
-            <br>
-            <span class="highlight--purple">I'm Kevin.</span></h1>
-          <p class="header__para">
-            I'm a <span class="highlight--purple">Frontend Software Engineer</span> with a strong passion and desire for building web applications with great user experiences.
-            <br>
-            Here's a bit more <span class="highlight--purple">about me.</span>
-          </p>
-          <div class="social__list">
-            <a href="https://www.linkedin.com/in/kevin-marrero-317020257/?skipRedirect=true" target="_blank" class="social__link click"> <i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/KevvoMar" target="_blank" class="social__link click"> <i class="fab fa-github"></i></a>
-            <a href="./assets/kev.pdf" target="_blank" class="social__link click"> <i class="fas fa-file-pdf" download></i></a>
-          </div>
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)">
+    <nav>
+      <figure class="nav__logo--wrapper">
+        <img class="nav__logo light__logo" src="./assets/logo.png" alt="" />
+      </figure>
+
+      <ul class="nav__link--list">
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor link__hover-effect">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="nav__link--anchor link__hover-effect">Projects</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" onclick="toggleModal()" class="nav__link--anchor link__hover-effect">Contact</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor link__hover-effect"><i class="fas fa-adjust click"
+              onclick="toggleLight()"></i> </a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="header">
+      <div class="header__content">
+        <h1 class="header__title">Hey
+          <br>
+          <span class="highlight--purple">I'm Kevin.</span>
+        </h1>
+        <p class="header__para">
+          I'm a <span class="highlight--purple">Frontend Software Engineer</span> with a strong passion and desire for
+          building web applications with great user experiences.
+          <br>
+          Here's a bit more <span class="highlight--purple">about me.</span>
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/kevin-marrero-317020257/?skipRedirect=true" target="_blank"
+            class="social__link click"> <i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/KevvoMar" target="_blank" class="social__link click"> <i
+              class="fab fa-github"></i></a>
+          <a href="./assets/KevsWebDevResume.pdf" target="_blank" class="social__link click"> <i class="fas fa-file-pdf"
+              download></i></a>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fas fa-envelope"></i>
-      </button>
-      <a href="#projects" class="scroll">
-        <div class="scroll__icon click"></div>
-      </a>
-      <div class="modal">
-        <div class="modal__half modal__about">
-          <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
-          <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
-          <p class="modal__para">
-            I’m a <span class="highlight--purple">Frontend software engineer</span> with a passion for building clean, responsive, and <span class="highlight--purple">user‑focused digital experiences.</span> At 21, I’m early in my career but deeply committed to growing my skills, taking on real‑world challenges, and contributing to teams that value <span class="highlight--purple">creativity</span> and <span class="highlight--purple">modern web development.</span> 
-            <br>
-            As a Hispanic developer, I’m proud to bring my perspective, work ethic, and curiosity into the tech space. I’m constantly learning, improving, and pushing myself to write better code and <span class="highlight--purple">create interfaces</span> that feel intuitive and engaging.
-          </p>
-          <div class="modal__languages">
-            <figure class="modal__language">
-              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+    <button class="mail__btn click" onclick="toggleModal()">
+      <i class="fas fa-envelope"></i>
+    </button>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+        <p class="modal__para">
+          I’m a <span class="highlight--purple">Frontend software engineer</span> with a passion for building clean,
+          responsive, and <span class="highlight--purple">user‑focused digital experiences.</span> At 21, I’m early in
+          my career but deeply committed to growing my skills, taking on real‑world challenges, and contributing to
+          teams that value <span class="highlight--purple">creativity</span> and <span class="highlight--purple">modern
+            web development.</span>
+          <br>
+          As a Hispanic developer, I’m proud to bring my perspective, work ethic, and curiosity into the tech space. I’m
+          constantly learning, improving, and pushing myself to write better code and <span
+            class="highlight--purple">create interfaces</span> that feel intuitive and engaging.
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049"
+              alt="">
             <span class="language__name">HTML</span>
-            </figure>
-            <figure class="modal__language">
-              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049"
+              alt="">
             <span class="language__name">HTML</span>
-            </figure>
-            <figure class="modal__language">
-              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049"
+              alt="">
             <span class="language__name">HTML</span>
-            </figure>
-            <figure class="modal__language">
-              <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049" alt="">
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/960px-HTML5_Badge.svg.png?_=20110131171049"
+              alt="">
             <span class="language__name">HTML</span>
-            </figure>
-          </div>
+          </figure>
         </div>
-        <div class="modal__half modal__contact">
-          <i class="fas fa-times modal__exit click" onclick="closeModal()"></i>
-          <h3 class="modal__title modal__title--contact">
-            Let's have a chat!
-          </h3>
-          <h4 class="modal__subtitle modal__subtitle--contact">I'm currently open to new opportunities.</h4>
-          <form id="contact__form" onsubmit="contact(event)">
-            <div class="form__item">
-              <label class="form__item--label">Name</label>
-              <input class="input" name="user__name" type="text" required></input>
-            </div>
-            <div class="form__item">
-              <label class="form__item--label">Email</label>
-              <input class="input" name="user__email" type="email" required></input>
-            </div>
-            <div class="form__item">
-              <label class="form__item--label">Message</label>
-              <textarea class="input" name="message" type="text" required></textarea>
-            </div>
-            <div class="form__submit--container">
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="closeModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Let's have a chat!
+        </h3>
+        <h4 class="modal__subtitle modal__subtitle--contact">I'm currently open to new opportunities.</h4>
+        <form id="contact__form" action="https://formsubmit.co/marrerokev25@gmail.com" method="POST"
+          onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user__name" type="text" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user__email" type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>
+          <div class="form__submit--container">
             <button id="contact__submit" class="form__submit">
               Send it my way
             </button>
-            </div>
-          </form>
-          <div class="modal__overlay modal__overlay--loading">
-            <i class="fas fa-spinner"></i>
           </div>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
 
-          <div class="modal__overlay modal__overlay--success">
-            Thanks for the message! Looking forward to chat soon.
-          </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to chat soon.
         </div>
       </div>
-      </div>
-      <img class="shape shape--0" src="./assets/semi circle.svg">
-      <img class="shape shape--1" src="./assets/squiggly.svg">
-      <img class="shape shape--2" src="./assets/circle.svg">
-      <img class="shape shape--3" src="./assets/triangle.svg">
-      <img class="shape shape--4" src="./assets/circle.svg">
-      <img class="shape shape--5" src="./assets/triangle.svg">
-      <img class="shape shape--6" src="./assets/squiggly.svg">
-      <img class="shape shape--7" src="./assets/triangle.svg">
-      <img class="shape shape--8" src="./assets/semi circle.svg">
+    </div>
+    </div>
+    <img class="shape shape--0" src="./assets/semi circle.svg">
+    <img class="shape shape--1" src="./assets/squiggly.svg">
+    <img class="shape shape--2" src="./assets/circle.svg">
+    <img class="shape shape--3" src="./assets/triangle.svg">
+    <img class="shape shape--4" src="./assets/circle.svg">
+    <img class="shape shape--5" src="./assets/triangle.svg">
+    <img class="shape shape--6" src="./assets/squiggly.svg">
+    <img class="shape shape--7" src="./assets/triangle.svg">
+    <img class="shape shape--8" src="./assets/semi circle.svg">
 
-    </section>
+  </section>
 
-    <section class="projects">
-      <div class="container">
-        <div class="row">
-          <h1 class="section__title">
-            Here are some of my <span class="highlight--purple">projects</span>
-          </h1>
-          <ul class="project__list">
-            <li class="project">
-              <div class="project__wrapper">
-                <img class="project__img" src="./assets/project1imagetest.png" alt="">
-                <div class="project__wrapper--bg"></div>
-                <div class="project__description">
-                  <h3 class="project__description--title">
-                    Fence Website Project
-                  </h3>
-                  <h4 class="project__description--sub-title">
-                    Html, CSS, JavaScript, React
-                  </h4>
-                  <p class="project__description--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates facere recusandae ex fugit delectus assumenda harum ipsam blanditiis optio minus nisi perferendis officia repellat est voluptatum ut necessitatibus, consectetur laboriosam.</p>
-                  <div class="project__description--links">
-                    <a href="https://directfencingservices.github.io" target="_blank" class="project__link">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://directfencingservices.github.io/directfencingservices/index.html" target="_blank" class="project__link">
-                      <i class="fas fa-link"></i>
-                    </a>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          Here are some of my <span class="highlight--purple">projects</span>
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img class="project__img" src="./assets/fencepage.png" alt="Fence Website image">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Fence Website Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Tech: HTML, CSS, JavaScript, responsive design, UI/UX.
+                </h4>
+                <p class="project__description--para">A production‑ready business website built for a real client.
+                  Includes a fully responsive layout, mobile‑first navigation, theme system, and custom UI components.
+                  Designed to improve customer trust and lead generation for a local service business.</p>
+                <div class="project__description--links">
+                  <a href="https://github.com/KevvoMar/Direct-Fencing-Services" target="_blank" class="project__link">
+                    <i class="fab fa-github icon click"></i>
+                  </a>
+                  <a href="https://directfencingservices.com" target="_blank" class="project__link">
+                    <i class="fas fa-link icon click"></i>
+                  </a>
 
-                  </div>
                 </div>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img class="project__img" src="./assets/anime-webpage-with-api.png" alt="Fence Website image">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Fence Website Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Tech: HTML, CSS, JavaScript, React, API.
+                </h4>
+                <p class="project__description--para">Anime search app powered by the Jikan API. Features live search,
+                  detailed anime pages, and recommended titles with a clean, responsive UI.</p>
+                <div class="project__description--links">
+                  <a href="https://github.com/KevvoMar/AnimePage-React-With-API" target="_blank" class="project__link">
+                    <i class="fab fa-github icon click"></i>
+                  </a>
+                  <a href="https://anime-page-react-with-3jdcwrhai-kevvomars-projects.vercel.app" target="_blank"
+                    class="project__link">
+                    <i class="fas fa-link icon click"></i>
+                  </a>
 
-    <footer>
-      <div class="container">
-        <div class="row footer__row">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
         <figure>
-        <img class="footer__logo--img" src="./assets/logo.png" alt="">
+          <img class="footer__logo--img" src="./assets/logo.png" alt="">
         </figure>
         <div class="footer__social--list">
+          <a href="https://github.com/KevvoMar" class="footer__social--link
+          link__hover-effect">
+            Github
+          </a>
+          <a href="https://www.linkedin.com/in/kevin-marrero-317020257/?skipRedirect=true" class="footer__social--link
+          link__hover-effect">
+            LinkedIn
+          </a>
           <a href="#" class="footer__social--link
-          link__hover-effect">
-          Github
-        </a>
-        <a href="#" class="footer__social--link
-          link__hover-effect">
-          LinkedIn
-        </a>
-        <a href="#" class="footer__social--link
-          link__hover-effect">
-          Email
-        </a>
-        <a href="#" class="footer__social--link
-          link__hover-effect">
-          Resume
-        </a>
+          link__hover-effect" onclick="toggleModal()">
+            Email
+          </a>
+          <a href="assets/KevsWebDevResume.pdf" class="footer__social--link
+          link__hover-effect" target="_blank">
+            Resume
+          </a>
         </div>
         <div class="footer__copyright">Copyright © 2026 Kevin Marrero</div>
-        </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-  </body>
+</body>
+
 </html>
