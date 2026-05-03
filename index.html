@@ -113,20 +113,25 @@
         <h4 class="modal__subtitle modal__subtitle--contact">I'm currently open to new opportunities.</h4>
         <form id="contact__form" action="https://formsubmit.co/marrerokev25@gmail.com" method="POST"
           onsubmit="contact(event)">
+
+          <input type="hidden" name="_redirect" value="false">
+          <input type="hidden" name="_next" value="about:blank">
+          <input type="hidden" name="_iframe" value="true">
+          
           <div class="form__item">
-            <label class="form__item--label">Name</label>
+            <label class="form__item--label">Name *</label>
             <input class="input" name="user__name" type="text" required></input>
           </div>
           <div class="form__item">
-            <label class="form__item--label">Email</label>
+            <label class="form__item--label">Email *</label>
             <input class="input" name="user__email" type="email" required></input>
           </div>
           <div class="form__item">
-            <label class="form__item--label">Message</label>
+            <label class="form__item--label">Message *</label>
             <textarea class="input" name="message" type="text" required></textarea>
           </div>
           <div class="form__submit--container">
-            <button id="contact__submit" class="form__submit">
+            <button id="contact__submit" class="form__submit" type="submit">
               Send it my way
             </button>
           </div>

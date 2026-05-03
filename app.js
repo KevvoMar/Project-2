@@ -1,5 +1,8 @@
 function contact(event) {
     event.preventDefault();
+    setTimeout(() => {
+        event.target.submit();
+    }, 800);
 
     const loading = document.querySelector('.modal__overlay--loading')
     const success = document.querySelector('.modal__overlay--success')
